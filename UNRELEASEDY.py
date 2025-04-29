@@ -14,7 +14,7 @@ def clear():
 if specPathName not in dirs:
     clear()
     os.system(f"mkdir {specPathName}")
-    print("A UNRELEASEDYaudio folder has been added to the same folder this program is inside. Copy all your music to that directory and have fun playing it! Dismiss this message by pressing enter")
+    print(f"A {specPathName} folder has been added to the same folder this program is inside. Copy all your music to that directory and have fun playing it! Dismiss this message by pressing enter")
     input()
 
 specPath = path + '/' + specPathName + '/'
@@ -53,7 +53,7 @@ def loop():
         mixer.music.play(-1)
         menu(songs[int(opt)])
     except:
-        if opt == 'Q': exit()
+        if opt == 'Q': main()
         elif opt == 'L': loop()
         elif opt == 'R':
             while True:
